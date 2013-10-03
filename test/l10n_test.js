@@ -31,7 +31,7 @@ exports.l10n = {
     test.expect(1);
 
     var actual = grunt.file.read('dist/test/fixtures/view/components/component-en_US.tpl.html');
-    var expected = grunt.file.read('expected/dist/test/fixtures/view/components/component-en_US.tpl.html');
+    var expected = grunt.file.read('test/expected/dist/test/fixtures/view/components/component-en_US.tpl.html');
     test.equal(actual, expected, 'should describe what the default behavior is.');
 
     test.done();
@@ -40,7 +40,7 @@ exports.l10n = {
     test.expect(1);
 
     var actual = grunt.file.read('dist/test/fixtures/view/components/component-en_US.tpl.html');
-    var expected = grunt.file.read('expected/dist/test/fixtures/view/components/component-en_US.tpl.html');
+    var expected = grunt.file.read('test/expected/dist/test/fixtures/view/components/component-en_US.tpl.html');
     test.equal(actual, expected, 'should describe what the default behavior is.');
 
     test.done();
