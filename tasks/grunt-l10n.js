@@ -20,7 +20,8 @@ module.exports = function(grunt) {
       punctuation: '.',
       separator: ', ',
       filter: 'isFile',
-      ext: '.tpl.html'
+      ext: '.tpl.html',
+      l10nConfig: 'l10n/l10n.js'
     });
     var l10n = grunt.file.readJSON(options.l10nConfig);
     var files = this.files;

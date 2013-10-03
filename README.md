@@ -52,33 +52,29 @@ A string value that is used to do something else with whatever else.
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
+the default l10n config will be in l10n/l10n.js
 ```js
 grunt.initConfig({
   l10n: {
     options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    src : ['test/fixtures/view/**/*.tpl.html'],
+    dest : 'dist/'
   },
 })
 ```
 
 #### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
+specify the `l10nConfig` and `ext`
 ```js
 grunt.initConfig({
   l10n: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      l10nConfig: 'l10n/l10n.js',
+      ext: '.tpl.html'
     },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
+    src : ['test/fixtures/view/**/*.tpl.html'],
+    dest : 'dist/'
+  }
 })
 ```
 
@@ -87,3 +83,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 _(Nothing yet)_
+
+## ToDo
+1. check whether the l10n config exist first before processing.

@@ -32,7 +32,6 @@ module.exports = function(grunt) {
     l10n: {
       default_options: {
         options: {
-          l10nConfig: 'l10n/l10n.js'
         },
         src : ['test/fixtures/view/**/*.tpl.html'],
         dest : 'dist/'
