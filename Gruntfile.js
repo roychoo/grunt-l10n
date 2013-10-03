@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['tmp']
+      tests: ['dist']
     },
 
     // Configuration to be run (and then tested).
@@ -34,16 +34,16 @@ module.exports = function(grunt) {
         options: {
           l10nConfig: 'l10n/l10n.js'
         },
-        src : ['test/fixtures/view/**/*.tpl.html']
+        src : ['test/fixtures/view/**/*.tpl.html'],
+        dest : 'dist/'
       },
       custom_options: {
         options: {
-          separator: ': ',
-          punctuation: ' !!!'
+          l10nConfig: 'l10n/l10n.js',
+          ext: '.tpl.html'
         },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
+        src : ['test/fixtures/view/**/*.tpl.html'],
+        dest : 'dist/'
       }
     },
 
