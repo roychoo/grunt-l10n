@@ -37,17 +37,17 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.l10nConfig
 Type: `String`
-Default value: `',  '`
+Default value: `'l10n/l10n.js'`
 
-A string value that is used to do something with whatever.
+A string value that is used to load the l10n config file, an example will be in `l10n` folder.
 
-#### options.punctuation
+#### options.ext
 Type: `String`
-Default value: `'.'`
+Default value: `'.tpl.html'`
 
-A string value that is used to do something else with whatever else.
+A string value that is used to load what ever templates files u might have.
 
 ### Usage Examples
 
@@ -86,3 +86,4 @@ _(Nothing yet)_
 
 ## ToDo
 1. check whether the l10n config exist first before processing.
+2. add the options of specifying delimiter, currently it is ```<%= something %>```
